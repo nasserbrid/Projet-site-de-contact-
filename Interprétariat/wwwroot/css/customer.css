@@ -1,0 +1,142 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 20px 10px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+}
+
+    .navbar li {
+        list-style: none;
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 30px;
+        font-weight: 700;
+    }
+
+header .navbar li a:hover {
+    color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+}
+
+.bannière {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images.jpg);
+    background-size: cover;
+}
+
+    .bannière .contenu {
+        max-width: 70%;
+        text-align: center;
+    }
+
+        .bannière .contenu h2 {
+            color: #fff;
+            font-size: 3em;
+            text-transform: capitalize;
+        }
+
+.contenu p:nth-child(2) {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+section {
+    padding: 100px;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .row .col50 {
+        position: relative;
+        width: 48%;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .row .col50 h2 {
+            margin-bottom: 20px;
+        }
+
+.titre-texte {
+    color: #000;
+    font-size: 2em;
+    font-weight: 300px;
+    text-transform: capitalize;
+}
+
+    .titre-texte span {
+        color: #fb911f;
+        font-size: 1.5em;
+        font-weight: 700px;
+    }
+
+.row .col50 img {
+    height: 450px;
+    width: 600px;
+    position: relative;
+}
+
+
+
+aside {
+    text-align: justify;
+}
+
+
+
+
+aside {
+    flex: 1.2;
+    position: relative;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    margin: 0.1em;
+}
