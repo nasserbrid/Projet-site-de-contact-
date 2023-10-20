@@ -1,8 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+
+#nullable disable
 
 namespace Interprétariat.Models
 {
-    public partial class ContactContext: DbContext
+    public partial class ContactContext : DbContext
     {
         public ContactContext()
         {
@@ -25,19 +29,19 @@ namespace Interprétariat.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+            modelBuilder.HasAnnotation("Relational:Collation", "French_CI_AS");
 
             modelBuilder.Entity<ContactModel>(entity =>
             {
-                entity.Property(e => e.Nom)
-                    .IsRequired()
-                    .HasMaxLength(100);
-
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasMaxLength(100);
 
                 entity.Property(e => e.Message)
+                    .IsRequired()
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Nom)
                     .IsRequired()
                     .HasMaxLength(100);
 
@@ -52,6 +56,3 @@ namespace Interprétariat.Models
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
-
-   
-

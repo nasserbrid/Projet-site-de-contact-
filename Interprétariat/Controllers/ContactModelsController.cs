@@ -18,7 +18,7 @@ namespace Interprétariat.Controllers
             _context = context;
         }
 
-        // GET: ContactModels
+        // GET: Contact
         public async Task<IActionResult> Index()
         {
             return View(await _context.Contacts.ToListAsync());
